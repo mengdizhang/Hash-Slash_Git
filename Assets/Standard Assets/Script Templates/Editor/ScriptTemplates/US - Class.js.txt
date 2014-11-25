@@ -1,0 +1,46 @@
+#pragma strict
+
+/**
+ * 
+ * 
+ * @module 
+ *
+ * @author 
+ * @date 
+ * 
+ */
+
+// .NET includes
+// import System.Collections;
+import System;
+
+// Unity includes
+//import UnityEngine;
+
+// Custom includes
+
+/**
+ * 
+ *
+ * @class #SCRIPTNAME#
+ */
+class #SCRIPTNAME#
+{
+	/* nested types */
+
+	/* static members */
+	
+	/*+ static methods +*/
+
+	/*+ static fields +*/
+
+	/* instance members */
+	
+	/*+ constructors +*/
+	
+	/*+ methods +*/
+	
+	/*+ fields +*/
+}
+
+/* EOF */

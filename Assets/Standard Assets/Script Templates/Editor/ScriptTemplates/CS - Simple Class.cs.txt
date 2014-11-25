@@ -1,0 +1,27 @@
+/**
+ * @file
+ * @brief 
+ * 
+ * 
+ * 
+ * @author 
+ * @date 
+ * 
+ */
+
+// .NET includes
+using System;
+
+// Unity includes
+using UnityEngine;
+
+// Custom includes
+
+/**
+ * @brief 
+ */
+public class #SCRIPTNAME#
+{
+}
+	
+/* EOF */

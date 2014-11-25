@@ -1,0 +1,192 @@
+/**
+ * @file
+ * @brief 
+ * 
+ * 
+ * 
+ * @author 
+ * @date 
+ * 
+ */
+
+// .NET includes
+using System;
+
+// Unity includes
+using UnityEngine;
+
+// Custom includes
+
+namespace #NAMESPACE# {
+	
+/**
+ * @brief 
+ */
+public class #SCRIPTNAME#
+{
+#region nested types
+		
+  #region nested types: public
+		
+	
+		
+  #endregion
+
+  #region nested types: protected
+		
+	
+		
+  #endregion
+
+  #region nested types: private
+		
+	
+		
+  #endregion
+		
+#endregion
+		
+#region static members
+		
+  #region static public
+		
+    #region static public: constructors and destructors
+		
+	
+		
+    #endregion
+		
+    #region static public: methods
+		
+	
+		
+    #endregion
+		
+    #region static public: properties
+		
+	
+		
+    #endregion
+		
+  #endregion
+
+  #region static protected
+		
+    #region static protected: constructors and destructors
+		
+	
+		
+    #endregion
+		
+    #region static protected: methods
+		
+	
+		
+    #endregion
+		
+    #region static protected: properties
+		
+	
+		
+    #endregion
+		
+  #endregion
+
+  #region static private
+		
+    #region static private: constructors and destructors
+		
+	
+		
+    #endregion
+		
+    #region static private: methods
+	
+	
+		
+    #endregion
+		
+    #region static private: properties
+		
+	
+		
+    #endregion
+		
+  #endregion
+		
+#endregion
+		
+#region instance members
+		
+  #region public
+		
+    #region public constructors and destructors
+		
+	
+		
+    #endregion
+		
+    #region public methods
+		
+	
+		
+    #endregion
+		
+    #region public properties
+		
+	
+		
+    #endregion
+		
+  #endregion
+
+  #region protected
+		
+    #region protected constructors and destructors
+		
+	
+		
+    #endregion
+		
+    #region protected methods
+		
+	
+		
+    #endregion
+		
+    #region protected properties
+		
+	
+		
+    #endregion
+		
+  #endregion
+
+  #region private
+		
+    #region private constructors and destructors
+		
+	
+		
+    #endregion
+		
+    #region private methods
+	
+	
+		
+    #endregion
+		
+    #region private properties
+		
+	
+		
+    #endregion
+		
+  #endregion
+		
+#endregion
+}
+	
+}  /* namespace #NAMESPACE# */
+
+/* EOF */
