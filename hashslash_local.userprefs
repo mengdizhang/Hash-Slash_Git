@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GamePlayScene\HealthBar.cs">
+    <Files>
+      <File FileName="Assets\Scripts\GamePlayScene\TargetEnemy.cs" Line="38" Column="3" />
+      <File FileName="Assets\Scripts\common\Beans\CharacterAttribute.cs" Line="4" Column="23" />
+      <File FileName="Assets\Scripts\common\Beans\BaseCharacterStat.cs" Line="13" Column="39" />
+      <File FileName="Assets\Scripts\GamePlayScene\HealthBar.cs" Line="57" Column="64" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{C78BA1D4-E9C8-3209-62BC-27752B98828D}</ProjectGuid>
+	<ProjectGuid>{7ADEA883-0ADB-BA70-CCC7-89509908185A}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -48,19 +48,23 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterGneratorScene\CharacterGnerator.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\GamePlayScene\Enemy.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\GameDirector.cs" />
-     <Compile Include="Assets\Scripts\GamePlayScene\MobHealthBar.cs" />
+     <Compile Include="Assets\Scripts\GamePlayScene\HealthBar.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\MobSpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\GamePlayScene\MobStat.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\Moving.cs" />
-     <Compile Include="Assets\Scripts\GamePlayScene\PlayerHealthBar.cs" />
+     <Compile Include="Assets\Scripts\GamePlayScene\Player.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\PlayerSpwanPoint.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\PlayerStat.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\BaseCharacterBean.cs" />
+     <Compile Include="Assets\Scripts\GamePlayScene\TargetEnemy.cs" />
+     <Compile Include="Assets\Scripts\common\Beans\BaseCharacterStat.cs" />
      <Compile Include="Assets\Scripts\common\Beans\BaseStatBean.cs" />
+     <Compile Include="Assets\Scripts\common\Beans\CharacterAttribute.cs" />
      <Compile Include="Assets\Scripts\common\Beans\HellephantMonsterBean.cs" />
+     <Compile Include="Assets\Scripts\common\Beans\MobCharacterStat.cs" />
      <Compile Include="Assets\Scripts\common\Beans\ModifiedStatBean.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\PlayerAttribute.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\PlayerCharacterBean.cs" />
+     <Compile Include="Assets\Scripts\common\Beans\PlayerCharacterStat.cs" />
      <Compile Include="Assets\Scripts\common\Beans\SkillBean.cs" />
      <Compile Include="Assets\Scripts\common\Beans\VitalBean.cs" />
      <Compile Include="Assets\Scripts\common\GameDatabase.cs" />
@@ -75,7 +79,7 @@
      <None Include="Assets\Standard Assets\Script Templates\Editor\ScriptTemplates\US - Class.js.txt" />
      <None Include="Assets\Standard Assets\Script Templates\readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>D:/Programming/MakeHashSlashNew/private_hashslash_normal/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>D:/Programming/MakeHashSlashNew/hashslash_local/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programming/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
@@ -83,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{644D3F96-416B-2837-F41A-1F684C8333B5}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{E8937820-72A3-1337-A48A-5AF380284D43}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

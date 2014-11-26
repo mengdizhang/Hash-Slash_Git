@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class HellephantMonsterBean : BaseCharacterBean
+public class HellephantMonsterBean : BaseCharacterStat
 {
 	public HellephantMonsterBean()
 	{

@@ -9,7 +9,8 @@ public class GameDatabase
 		public static string GameMaster = "GameMaster";
 		public static string Hellephant = "Hellephant";
 		public static string PlayerCharacterBean = "PlayerCharacterBean";
-
+		public static string MobCharacterBean = "MobCharacterBean";
+		public static string MobTag = "Mob";
 		//BaseStatBean initial values
 		public static int base_value_ = 0;
 		public static int buff_value_ = 0;
@@ -56,7 +57,7 @@ public class GameDatabase
 		
 				SpawanPoints, //sub1 Environment dir
 				PlayerSpwanPoint,
-				MonsterSpwanPoint,
+				MobSpwanPoint,
 		
 				NONE 
 		}

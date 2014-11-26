@@ -62,7 +62,8 @@ public class BaseStat
 
 	#region getters and setters
 		public int TotalValue {
-				get { return total_value_; }
+				get { Update ();
+						return total_value_; }
 				set { total_value_ = value; }
 		}
 

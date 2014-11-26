@@ -20,7 +20,7 @@ using UnityEngine;
  */
 public class CharacterGnerator:MonoBehaviour
 {
-		private PlayerCharacterBean playerCharacterBean;
+		private PlayerCharacterStat playerCharacterBean;
 		private int MAX_POINTS;
 		private int points_left_;
 	
@@ -111,7 +111,7 @@ public class CharacterGnerator:MonoBehaviour
 		{
 		
 				Debug.Log (" init() called ");
-				playerCharacterBean = GameDatabase.Add<PlayerCharacterBean> (GameDatabase.PlayerCharacterBean, new PlayerCharacterBean ());
+				playerCharacterBean = GameDatabase.Add<PlayerCharacterStat> (GameDatabase.PlayerCharacterBean, new PlayerCharacterStat ());
 
 				rect_width_ = 50f;
 				rect_height_ = 25f;
