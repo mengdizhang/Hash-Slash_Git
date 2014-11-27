@@ -1,20 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GamePlayScene\GamePlaying.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="E:\DigitalTutor\itro2_unity_script_files\project_files\Unity Scripting\Unity Scripting\Assets\Scripts\Foundation Scripts\Lesson_09.js">
     <Files>
-      <File FileName="Assets\Scripts\GamePlayScene\CameraFollow.cs" Line="11" Column="41" />
-      <File FileName="Assets\Scripts\CharacterGneratorScene\StartGame.cs" Line="25" Column="4" />
-      <File FileName="Assets\Scripts\common\stats\CharacterStat.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterGneratorScene\CreateCharacter.cs" Line="199" Column="25" />
-      <File FileName="Assets\Scripts\GamePlayScene\PlayerStat.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\common\stats\CharacterAttribute.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\common\stats\BaseStat.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GamePlayScene\GamePlaying.cs" Line="73" Column="54" />
-      <File FileName="Assets\Scripts\GamePlayScene\PlayerSpwanPoint.cs" Line="21" Column="1" />
-      <File FileName="Assets\Scripts\GamePlayScene\HealthBar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GamePlayScene\TargetEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\common\NotificationCenter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GamePlayScene\Moving.cs" Line="70" Column="1" />
+      <File FileName="E:\DigitalTutor\itro2_unity_script_files\project_files\Unity Scripting\Unity Scripting\Assets\Scripts\Foundation Scripts\Lesson_09.js" Line="10" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
