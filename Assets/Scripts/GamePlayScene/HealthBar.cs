@@ -3,13 +3,13 @@ using System.Collections;
 
 public class HealthBar : MonoBehaviour
 {
-		public float maxHealth = 100f;
-		public float currHealth = 100f;
+		public float maxHealth;
+		public float currHealth;
 		
 		public float maxBarLen;
 		public float currBarLen;
 		private GUITexture healthBar;
-		private PlayerCharacterStat playerStat;
+		//private PlayerCharacterStat playerStat;
 		public bool isPlayerHealthBar = false;
 
 		// Use this for initialization
@@ -25,7 +25,7 @@ public class HealthBar : MonoBehaviour
 				currBarLen = maxBarLen = healthBar.pixelInset.width;
 
 				//playerStat = GameDatabase.Get<PlayerCharacterBean> (GameDatabase.PlayerCharacterBean);
-				playerStat = new PlayerCharacterStat ();
+				//playerStat = new PlayerCharacterStat ();
 		}
 	
 		// Update is called once per frame
@@ -48,7 +48,9 @@ public class HealthBar : MonoBehaviour
 						Debug.Log ("MobHealthBar OnEnable() AddObserver");
 						NotificationCenter.DefaultCenter ().AddObserver (this, "ResizeMobHealthBar");
 				}
-
+				NotificationCenter.DefaultCenter ().AddObserver (this, "ShowHealthBar");
+				NotificationCenter.DefaultCenter ().AddObserver (this, "HideHealthBar");
+				NotificationCenter.DefaultCenter ().AddObserver (this, "InitHealthBarPoints");
 		}
 	
 		void OnDisable ()
@@ -60,26 +62,33 @@ public class HealthBar : MonoBehaviour
 						Debug.Log ("MobHealthBar OnDisable() RemoveObserver");
 						NotificationCenter.DefaultCenter ().RemoveObserver (this, "ResizeMobHealthBar");
 				}
+				NotificationCenter.DefaultCenter ().RemoveObserver (this, "ShowHealthBar");
+				NotificationCenter.DefaultCenter ().RemoveObserver (this, "HideHealthBar");
+				NotificationCenter.DefaultCenter ().AddObserver (this, "InitHealthBarPoints");
 		}
 
 		void ResizePlayerHealthBar (Notification notification)
 		{
-				Hashtable ht = (Hashtable)notification.data;
-				Debug.Log ("curr health = " + (float)ht ["currHealth"] + ", maxHealth = " + (float)ht ["maxHealth"]);
-				float currHealth = (float)ht ["currHealth"];
-				float maxHealth = (float)ht ["maxHealth"];
+				Debug.Log ("ResizePlayerHealthBar");
 				currBarLen = (currHealth / maxHealth) * maxBarLen;
 				healthBar.pixelInset = new Rect (healthBar.pixelInset.x, healthBar.pixelInset.y, currBarLen, healthBar.pixelInset.height);
 		}
 
 		void ResizeMobHealthBar (Notification notification)
-		{
-				Hashtable ht = (Hashtable)notification.data;
-				Debug.Log ("curr health = " + (float)ht ["currHealth"] + ", maxHealth = " + (float)ht ["maxHealth"]);
-				float currHealth = (float)ht ["currHealth"];
-				float maxHealth = (float)ht ["maxHealth"];
+		{	
+				Debug.Log ("ResizeMobHealthBar");
 				currBarLen = (currHealth / maxHealth) * maxBarLen;
 				healthBar.pixelInset = new Rect (healthBar.pixelInset.x, healthBar.pixelInset.y, currBarLen, healthBar.pixelInset.height);
+		}
+
+		void ShowHealthBar (Notification notification)
+		{
+				healthBar.enabled = true;
+		}
+
+		void HideHealthBar (Notification notification)
+		{
+				healthBar.enabled = false;
 		}
 
 }

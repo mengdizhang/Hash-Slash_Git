@@ -46,10 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CharacterGneratorScene\CharacterGnerator.cs" />
+     <Compile Include="Assets\Scripts\CharacterGneratorScene\CreateCharacter.cs" />
+     <Compile Include="Assets\Scripts\CharacterGneratorScene\StartGame.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\Enemy.cs" />
-     <Compile Include="Assets\Scripts\GamePlayScene\GameDirector.cs" />
+     <Compile Include="Assets\Scripts\GamePlayScene\GamePlaying.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\HealthBar.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\MobSpawnPoint.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\MobStat.cs" />
@@ -58,17 +59,16 @@
      <Compile Include="Assets\Scripts\GamePlayScene\PlayerSpwanPoint.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\PlayerStat.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\TargetEnemy.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\BaseCharacterStat.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\BaseStatBean.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\CharacterAttribute.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\HellephantMonsterBean.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\MobCharacterStat.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\ModifiedStatBean.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\PlayerCharacterStat.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\SkillBean.cs" />
-     <Compile Include="Assets\Scripts\common\Beans\VitalBean.cs" />
+     <Compile Include="Assets\Scripts\GamePlayScene\test.cs" />
      <Compile Include="Assets\Scripts\common\GameDatabase.cs" />
      <Compile Include="Assets\Scripts\common\NotificationCenter.cs" />
+     <Compile Include="Assets\Scripts\common\stats\BaseStat.cs" />
+     <Compile Include="Assets\Scripts\common\stats\CharacterAttribute.cs" />
+     <Compile Include="Assets\Scripts\common\stats\CharacterStat.cs" />
+     <Compile Include="Assets\Scripts\common\stats\HellephantMonsterBean.cs" />
+     <Compile Include="Assets\Scripts\common\stats\ModifiedStatBean.cs" />
+     <Compile Include="Assets\Scripts\common\stats\SkillBean.cs" />
+     <Compile Include="Assets\Scripts\common\stats\VitalBean.cs" />
      <None Include="Assets\Standard Assets\Script Templates\Editor\ScriptTemplates\CS - Class.cs.txt" />
      <None Include="Assets\Standard Assets\Script Templates\Editor\ScriptTemplates\CS - Simple Class.cs.txt" />
      <None Include="Assets\Shaders\Rim Lit Bumped Specular.shader" />

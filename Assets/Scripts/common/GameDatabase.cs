@@ -11,6 +11,7 @@ public class GameDatabase
 		public static string PlayerCharacterBean = "PlayerCharacterBean";
 		public static string MobCharacterBean = "MobCharacterBean";
 		public static string MobTag = "Mob";
+
 		//BaseStatBean initial values
 		public static int base_value_ = 0;
 		public static int buff_value_ = 0;
@@ -29,7 +30,11 @@ public class GameDatabase
 
 		//control debug log 
 		public static bool logFlag = true;
-
+		//healthbar metods names
+		public static string ShowHealthBar = "ShowHealthBar";
+		public static string HideHealthBar = "HideHealthBar";
+		public static string ResizePlayerHealthBar = "ResizePlayerHealthBar";
+		public static string ResizeMobHealthBar = "ResizeMobHealthBar";
 		//all prefabs paths
 		public enum PrefabPath
 		{
@@ -44,6 +49,7 @@ public class GameDatabase
 				MobHealthBar, 
 				Hellephant,/* /Resources/Prefabs/Character/Hellephant */
 				ZomBear,/* /Resources/Prefabs/Character/ZomBear */
+				ZomBunny, // /Resources/Prefabs/Character/ZomBunny */
 		
 				Environments,/* dir path : /Resources/Prefabs/Environment */
 				Envir,/* /Resources/Prefabs/Environment/Envir*/

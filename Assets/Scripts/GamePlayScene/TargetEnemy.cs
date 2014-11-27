@@ -26,24 +26,9 @@ public class TargetEnemy : MonoBehaviour
 		{
 				/*target enemy*/
 				if (Input.GetKeyUp (KeyCode.Tab)) {
-						if (selectedTarget == null) {
-								sort_targets_by_dist ();
-						} else {
-								int index = targets.IndexOf (selectedTarget);
-								if (index < targets.Count - 1) {
-					
-										index++;
-								} else
-										index = 0;
-//								selectedTarget.renderer.material.color = Color.blue;
-								selectedTarget = targets [index];
-								selectedTarget.renderer.material.color = Color.red;
-						}
-			
-						target = selectedTarget.gameObject;
+						UpdatTarget ();
 				}
 		}
-
 		///tartgetting enemeies
 		public void add_tartget_enemy (Transform enemy)
 		{
@@ -53,9 +38,32 @@ public class TargetEnemy : MonoBehaviour
 		public void sort_targets_by_dist ()
 		{
 				targets.Sort (delegate(Transform t1, Transform t2) {
-						return Vector3.Distance (t1.position, transform.position).CompareTo (Vector3.Distance (t2.position, transform.position));
+						return Vector3.Distance (t1.position, transform.position).CompareTo 
+				(Vector3.Distance (t2.position, transform.position));
 				});
 				selectedTarget = targets [0];
 				//selectedTarget.renderer.material.color = Color.red;
+		}
+
+		private void  UpdatTarget ()
+		{
+				if (selectedTarget == null) {
+						sort_targets_by_dist ();
+						NotificationCenter.DefaultCenter ().PostNotification (this, GameDatabase.ShowHealthBar);
+				}
+						
+				int index = targets.IndexOf (selectedTarget);
+				if (index < targets.Count - 1) {
+				
+						index++;
+				} else
+						index = 0;
+				//								selectedTarget.renderer.material.color = Color.blue;
+				selectedTarget.FindChild ("Name").GetComponent<MeshRenderer> ().enabled = false;
+				selectedTarget = targets [index];
+				//selectedTarget.renderer.material.color = Color.red;
+				selectedTarget.FindChild ("Name").GetComponent<MeshRenderer> ().enabled = true;
+				target = selectedTarget.gameObject;
+				NotificationCenter.DefaultCenter ().PostNotification (this, GameDatabase.ResizeMobHealthBar, selectedTarget);
 		}
 }

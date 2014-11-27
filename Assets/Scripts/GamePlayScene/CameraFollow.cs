@@ -8,8 +8,9 @@ public class CameraFollow : MonoBehaviour
 	
 		void Awake ()
 		{
-				//Debug.Log ("camera follow Awake()");
+				Debug.Log ("camera follow Awake()");
 				target = GameObject.FindGameObjectWithTag (GameDatabase.PrefabPath.WhitePlayer.ToString ()).transform;
+				transform.parent = GameObject.FindGameObjectWithTag (GameDatabase.GameDirector).transform;
 		}
 		void Start ()
 		{

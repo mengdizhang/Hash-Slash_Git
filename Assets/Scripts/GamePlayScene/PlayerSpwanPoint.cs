@@ -17,8 +17,8 @@ public class PlayerSpwanPoint : MonoBehaviour
 				whitePlayer.tag = GameDatabase.PrefabPath.WhitePlayer.ToString ();
 				whitePlayer.transform.parent = playerContainer;
 		
-				//Calculate the initial offset.
-				CameraFollow scr = Camera.main.gameObject.AddComponent<CameraFollow> ();
+				//Calculate the initial offset.	
+				CameraFollow cf = Camera.main.gameObject.AddComponent<CameraFollow> ();
 
 				//init player health bar
 				string playerHealthBarPath = GameDatabase.PrefabPath.Prefabs.ToString () + Path.AltDirectorySeparatorChar + GameDatabase.PrefabPath.Players.ToString () + Path.AltDirectorySeparatorChar + GameDatabase.PrefabPath.PlayerHealthBar.ToString ();
