@@ -8,7 +8,6 @@ public class PlayerSpwanPoint : MonoBehaviour
 		void Start ()
 		{
 				Debug.Log ("PlayerSpwanPoint -> start() -> start create player to the scene....");
-
 				playerContainer = GameObject.Find (GameDatabase.PrefabPath.Players.ToString ()).transform;
 
 				//init player
@@ -24,10 +23,17 @@ public class PlayerSpwanPoint : MonoBehaviour
 				string playerHealthBarPath = GameDatabase.PrefabPath.Prefabs.ToString () + Path.AltDirectorySeparatorChar + GameDatabase.PrefabPath.Players.ToString () + Path.AltDirectorySeparatorChar + GameDatabase.PrefabPath.PlayerHealthBar.ToString ();
 				GameObject playerHealthBar = GameObject.Instantiate (Resources.Load (playerHealthBarPath)) as GameObject;
 				playerHealthBar.isStatic = true;
-				//playerHealthBar.tag = GameDatabase.PrefabPath.PlayerHealthBar.ToString ();
 				playerHealthBar.transform.parent = playerContainer;
+
+				//append characterstat to whiteplayer
+				CharacterStat stat = GameObject.FindGameObjectWithTag (GameDatabase.GameDirector).GetComponent<CharacterStat> ();
+				CharacterStat statt = whitePlayer.GetComponent<CharacterStat> ();
+				statt.Copy (stat);
+				//statt.ToStr ();
+				Destroy (stat);
+
 		}
-	
+
 		// Update is called once per frame
 		void Update ()
 		{

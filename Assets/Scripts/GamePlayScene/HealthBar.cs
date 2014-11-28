@@ -15,10 +15,10 @@ public class HealthBar : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				if (isPlayerHealthBar)
-						Debug.Log ("PlayerHealthBar Start()");
-				else
-						Debug.Log ("MobHealthBar Start()");
+//				if (isPlayerHealthBar)
+//						Debug.Log ("PlayerHealthBar Start()");
+//				else
+//						Debug.Log ("MobHealthBar Start()");
 
 					
 				healthBar = gameObject.GetComponent<GUITexture> ();
@@ -40,12 +40,12 @@ public class HealthBar : MonoBehaviour
 
 		void OnEnable ()
 		{
-				Debug.Log (" isPlayerHealthBar = " + isPlayerHealthBar + "go name is " + gameObject.name);
+				//Debug.Log (" isPlayerHealthBar = " + isPlayerHealthBar + "go name is " + gameObject.name);
 				if (isPlayerHealthBar) {
-						Debug.Log ("PlayerHealthBar OnEnable() AddObserver");
+						//Debug.Log ("PlayerHealthBar OnEnable() AddObserver");
 						NotificationCenter.DefaultCenter ().AddObserver (this, "ResizePlayerHealthBar");
 				} else {
-						Debug.Log ("MobHealthBar OnEnable() AddObserver");
+						//Debug.Log ("MobHealthBar OnEnable() AddObserver");
 						NotificationCenter.DefaultCenter ().AddObserver (this, "ResizeMobHealthBar");
 				}
 				NotificationCenter.DefaultCenter ().AddObserver (this, "ShowHealthBar");
@@ -56,10 +56,10 @@ public class HealthBar : MonoBehaviour
 		void OnDisable ()
 		{				
 				if (isPlayerHealthBar) {
-						Debug.Log ("PlayerHealthBar OnDisable() RemoveObserver");
+						//Debug.Log ("PlayerHealthBar OnDisable() RemoveObserver");
 						NotificationCenter.DefaultCenter ().RemoveObserver (this, "ResizePlayerHealthBar");
 				} else {
-						Debug.Log ("MobHealthBar OnDisable() RemoveObserver");
+						//Debug.Log ("MobHealthBar OnDisable() RemoveObserver");
 						NotificationCenter.DefaultCenter ().RemoveObserver (this, "ResizeMobHealthBar");
 				}
 				NotificationCenter.DefaultCenter ().RemoveObserver (this, "ShowHealthBar");

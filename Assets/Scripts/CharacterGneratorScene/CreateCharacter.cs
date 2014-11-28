@@ -192,16 +192,20 @@ public class CreateCharacter : MonoBehaviour
 				}
 		}
 
-		private void InitEnterNeweScene ()
+		private void InitBeforeEnterNeweScene ()
 		{
-				GetComponent<StartGame> ().enabled = false;
-				this.enabled = false;
+				//GetComponent<StartGame> ().enabled = false;
+				//this.enabled = false;
+
+				//clearup old script and add new script
 				gameObject.AddComponent<GamePlaying> ();
+				Destroy (GetComponent<StartGame> ());
+				Destroy (this);
 		}
 		private void onCreateCharacterBntClicked ()
 		{
 				Debug.Log ("CreateCharacter -> onCreateCharacterBntClicked() called");
-				InitEnterNeweScene ();
+				InitBeforeEnterNeweScene ();
 				Application.LoadLevel (GameDatabase.SceneName.StartGameScene1.ToString ());
 		}
 }

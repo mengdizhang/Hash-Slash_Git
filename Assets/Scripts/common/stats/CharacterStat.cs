@@ -10,12 +10,9 @@ public enum PlayerTypes //moster bar or player bar
 
 public class CharacterStat : MonoBehaviour
 {
-		private string name_;
-		//private PlayerTypes characterType;
-	
-		private UInt32 level_;
-		private UInt32 free_exp_;
-	
+		public string name_;
+		public UInt32 level_;
+		public UInt32 free_exp_;
 		public CharacterAttribute[] primary_attributes_;
 		public VitalBean[] vitals_;
 		public SkillBean[] skills_;
@@ -188,5 +185,36 @@ public class CharacterStat : MonoBehaviour
 		
 				GetSkill ((int)SkillName.Range_Offence).AddModifier (new ModifyingAttribute (GetPrimaryAttribute ((int)CharacterAttributeName.Speed), 2));
 		
+		}
+
+		public void Copy (CharacterStat stat)
+		{
+				name_ = stat.Name;
+				level_ = stat.Level;
+				free_exp_ = stat.FreeExp;
+				for (int attri_cnt = 0; attri_cnt < primary_attributes_.Length; attri_cnt++) {
+						//you must update attri first because other are updated based on attri
+						primary_attributes_ [attri_cnt].BaseValue = stat.GetPrimaryAttribute (attri_cnt).BaseValue;
+						primary_attributes_ [attri_cnt].Buff_Value = stat.GetPrimaryAttribute (attri_cnt).Buff_Value;
+						primary_attributes_ [attri_cnt].TotalValue = stat.GetPrimaryAttribute (attri_cnt).TotalValue;
+				}
+				UpdateStats ();
+		}
+
+		public void ToStr ()
+		{
+				Debug.Log ("Name: " + name_);
+				for (int cnt = 0; cnt < primary_attributes_.Length; cnt++) {
+						Debug.Log ("AttriName: " + primary_attributes_ [cnt].AttriName + ", value: " + primary_attributes_ [cnt].TotalValue);
+				}
+
+				for (int vital_cnt = 0; vital_cnt < vitals_.Length; vital_cnt++) {
+						Debug.Log ("vital name: " + ((VitalName)vital_cnt).ToString () + ", value: " + vitals_ [vital_cnt].TotalValue);
+				}
+
+				for (int skill_cnt = 0; skill_cnt < skills_.Length; skill_cnt++) {
+			
+						Debug.Log ("skill name: " + ((SkillName)skill_cnt).ToString () + ", value: " + skills_ [skill_cnt].TotalValue);
+				}
 		}
 }

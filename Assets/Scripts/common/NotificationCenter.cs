@@ -19,10 +19,11 @@ public class NotificationCenter : MonoBehaviour
 				// If the defaultCenter doesn't already exist, we need to create it
 				if (!defaultCenter) {
 						// Because the NotificationCenter is a component, we have to create a GameObject to attach it to.
-						GameObject notificationObject = new GameObject ("DefaultNotificationCenter");
-						notificationObject.transform.parent = GameObject.FindGameObjectWithTag (GameDatabase.GameDirector).transform;
+						//GameObject notificationObject = new GameObject ("DefaultNotificationCenter");
+						//notificationObject.transform.parent = GameObject.FindGameObjectWithTag (GameDatabase.GameDirector).transform;
 						// Add the NotificationCenter component, and set it as the defaultCenter
-						defaultCenter = notificationObject.AddComponent<NotificationCenter> ();
+						//defaultCenter = notificationObject.AddComponent<NotificationCenter> ();
+						defaultCenter = GameObject.FindGameObjectWithTag (GameDatabase.GameDirector).AddComponent<NotificationCenter> ();
 						DontDestroyOnLoad (defaultCenter);
 				}
 

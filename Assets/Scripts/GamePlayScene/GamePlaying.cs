@@ -22,12 +22,11 @@ public class GamePlaying : MonoBehaviour
 {		
 		void Awake ()
 		{
-				InitializeScene ();
 		}
 
 		void Start ()
 		{
-				//InitializeScene ();
+				InitializeScene ();
 		}
 
 		private void InitializeScene ()
@@ -109,9 +108,7 @@ public class GamePlaying : MonoBehaviour
 				path = GameDatabase.PrefabPath.Prefabs.ToString () + Path.AltDirectorySeparatorChar + GameDatabase.PrefabPath.Environments.ToString () + Path.AltDirectorySeparatorChar + GameDatabase.PrefabPath.Lights.ToString ();
 				GameObject lights = GameObject.Instantiate (Resources.Load (path)) as GameObject;
 				lights.transform.parent = envirs.transform;
-				#endregion
-
-				
+				#endregion				
 		}
 }
 

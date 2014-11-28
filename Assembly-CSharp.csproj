@@ -59,7 +59,6 @@
      <Compile Include="Assets\Scripts\GamePlayScene\PlayerSpwanPoint.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\PlayerStat.cs" />
      <Compile Include="Assets\Scripts\GamePlayScene\TargetEnemy.cs" />
-     <Compile Include="Assets\Scripts\GamePlayScene\test.cs" />
      <Compile Include="Assets\Scripts\common\GameDatabase.cs" />
      <Compile Include="Assets\Scripts\common\NotificationCenter.cs" />
      <Compile Include="Assets\Scripts\common\stats\BaseStat.cs" />

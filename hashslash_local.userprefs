@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="E:\DigitalTutor\itro2_unity_script_files\project_files\Unity Scripting\Unity Scripting\Assets\Scripts\Foundation Scripts\Lesson_09.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GamePlayScene\HealthBar.cs">
     <Files>
-      <File FileName="E:\DigitalTutor\itro2_unity_script_files\project_files\Unity Scripting\Unity Scripting\Assets\Scripts\Foundation Scripts\Lesson_09.js" Line="10" Column="24" />
+      <File FileName="Assets\Scripts\GamePlayScene\PlayerSpwanPoint.cs" Line="33" Column="20" />
+      <File FileName="Assets\Scripts\common\stats\CharacterAttribute.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\common\stats\CharacterStat.cs" Line="204" Column="23" />
+      <File FileName="Assets\Scripts\common\stats\VitalBean.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GamePlayScene\HealthBar.cs" Line="43" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
