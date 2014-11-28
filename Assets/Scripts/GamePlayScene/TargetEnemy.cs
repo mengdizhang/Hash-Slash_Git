@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
+using System.Collections;
 public class TargetEnemy : MonoBehaviour
 {
 		///tartgetting enemeies
@@ -8,7 +8,7 @@ public class TargetEnemy : MonoBehaviour
 		public List<Transform> targets;
 		public GameObject[] enemies;
 		public Transform selectedTarget;
-
+		private Hashtable ht = new Hashtable ();
 		// Use this for initialization
 		void Start ()
 		{
@@ -29,11 +29,7 @@ public class TargetEnemy : MonoBehaviour
 						UpdatTarget ();
 				}
 		}
-		///tartgetting enemeies
-		public void add_tartget_enemy (Transform enemy)
-		{
-				targets.Add (enemy);
-		}
+
 	
 		public void sort_targets_by_dist ()
 		{
@@ -51,7 +47,6 @@ public class TargetEnemy : MonoBehaviour
 						sort_targets_by_dist ();
 						NotificationCenter.DefaultCenter ().PostNotification (this, GameDatabase.ShowHealthBar);
 				}
-						
 				int index = targets.IndexOf (selectedTarget);
 				if (index < targets.Count - 1) {
 				
@@ -64,6 +59,7 @@ public class TargetEnemy : MonoBehaviour
 				//selectedTarget.renderer.material.color = Color.red;
 				selectedTarget.FindChild ("Name").GetComponent<MeshRenderer> ().enabled = true;
 				target = selectedTarget.gameObject;
-				NotificationCenter.DefaultCenter ().PostNotification (this, GameDatabase.ResizeMobHealthBar, selectedTarget);
+				ht ["maxHealth"] = ht ["currHealth"] = (float)target.GetComponent<CharacterStat> ().GetVital ((int)VitalName.Health).TotalValue;
+				NotificationCenter.DefaultCenter ().PostNotification (this, GameDatabase.ResizeMobHealthBar, ht);
 		}
 }

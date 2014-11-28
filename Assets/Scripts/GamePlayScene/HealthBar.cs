@@ -3,8 +3,8 @@ using System.Collections;
 
 public class HealthBar : MonoBehaviour
 {
-		public float maxHealth;
-		public float currHealth;
+		//public float maxHealth;
+		//public float currHealth;
 		
 		public float maxBarLen;
 		public float currBarLen;
@@ -70,14 +70,20 @@ public class HealthBar : MonoBehaviour
 		void ResizePlayerHealthBar (Notification notification)
 		{
 				Debug.Log ("ResizePlayerHealthBar");
-				currBarLen = (currHealth / maxHealth) * maxBarLen;
+				Hashtable ht = notification.data as Hashtable;
+				Debug.Log ("ht [currHealth] = " + ht ["currHealth"] + "ht [maxHealt] = " + ht ["maxHealth"]);
+				currBarLen = ((float)ht ["currHealth"] / (float)ht ["maxHealth"]) * maxBarLen;
+				Debug.Log ("currBarLen = " + currBarLen);
 				healthBar.pixelInset = new Rect (healthBar.pixelInset.x, healthBar.pixelInset.y, currBarLen, healthBar.pixelInset.height);
 		}
 
 		void ResizeMobHealthBar (Notification notification)
 		{	
-				Debug.Log ("ResizeMobHealthBar");
-				currBarLen = (currHealth / maxHealth) * maxBarLen;
+				Debug.Log ("ResizeMobHealthBar, sender is " + notification.sender.name);
+				Hashtable ht = notification.data as Hashtable;
+				Debug.Log ("ht [currHealth] = " + ht ["currHealth"] + "ht [maxHealt] = " + ht ["maxHealth"]);
+				currBarLen = ((float)ht ["currHealth"] / (float)ht ["maxHealth"]) * maxBarLen;
+				Debug.Log ("currBarLen = " + currBarLen);
 				healthBar.pixelInset = new Rect (healthBar.pixelInset.x, healthBar.pixelInset.y, currBarLen, healthBar.pixelInset.height);
 		}
 

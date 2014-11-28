@@ -2,24 +2,19 @@
 using System.Collections;
 using System; //to access to the enum
 
-
-public enum PlayerTypes //moster bar or player bar
-{
-		whiteplayer
-}
-
 public class CharacterStat : MonoBehaviour
 {
+		public string characterType;
 		public string name_;
-		public UInt32 level_;
-		public UInt32 free_exp_;
+		public int level_;
+		public int free_exp_;
 		public CharacterAttribute[] primary_attributes_;
 		public VitalBean[] vitals_;
 		public SkillBean[] skills_;
 
 		void Awake ()
 		{
-				Debug.Log ("CharacterStat -> Awake()");
+				//Debug.Log ("CharacterStat -> Awake()");
 				name_ = string.Empty;
 				level_ = 0;
 				free_exp_ = 0;
@@ -40,7 +35,7 @@ public class CharacterStat : MonoBehaviour
 		}
 		void Start ()
 		{
-				Debug.Log ("CharacterStat -> Start()");
+				//Debug.Log ("CharacterStat -> Start()");
 		}
 
 	
@@ -64,7 +59,7 @@ public class CharacterStat : MonoBehaviour
 				}
 		}
 	
-		public void AddFreeExp (UInt32 exp) //add_exp
+		public void AddFreeExp (int exp) //add_exp
 		{
 				free_exp_ += exp;
 				UpdateLevel ();
@@ -75,22 +70,22 @@ public class CharacterStat : MonoBehaviour
 		
 		}
 	
-//		public PlayerTypes PlayerTypes {
-//				get { return characterType; }
-//				set { characterType = value; }
-//		}
+		public string CharacterType {
+				get { return characterType; }
+				set { characterType = value; }
+		}
 	
 		public string Name {
 				get { return name_; }
 				set { name_ = value; }
 		}
 	
-		public UInt32 Level {
+		public int Level {
 				get { return level_; }
 				set { level_ = value; }
 		}
 	
-		public UInt32 FreeExp {
+		public int FreeExp {
 				get { return free_exp_; }
 				set { free_exp_ = value; }
 		}

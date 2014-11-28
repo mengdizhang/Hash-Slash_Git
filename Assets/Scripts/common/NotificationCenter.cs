@@ -32,7 +32,7 @@ public class NotificationCenter : MonoBehaviour
 
 		void Start ()
 		{
-				enabled = false;
+				//enabled = false;
 				//defaultCenter = this;
 				// If the defaultCenter doesn't already exist, we need to create it
 				//DontDestroyOnLoad (this);
